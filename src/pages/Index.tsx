@@ -27,34 +27,51 @@ const Index = () => {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-primary via-primary to-[hsl(var(--brand-blue-light))] text-primary-foreground py-24">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-              Vehículos Seminuevos de la Mejor Calidad
-            </h1>
-            <p className="text-xl md:text-2xl mb-8 text-primary-foreground/90">
-              Encuentra el auto perfecto para ti con las mejores opciones de financiamiento en Chihuahua
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <Button 
-                size="lg" 
-                className="bg-accent hover:bg-accent/90 text-accent-foreground font-bold text-lg px-8"
-                asChild
-              >
-                <Link to="/catalogo">
-                  Ver Catálogo
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-              </Button>
-              <Button 
-                size="lg" 
-                variant="outline" 
-                className="bg-transparent border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary font-bold text-lg px-8"
-                asChild
-              >
-                <Link to="/sobre-nosotros">Conócenos</Link>
-              </Button>
+      <section className="relative overflow-hidden h-[600px] md:h-[700px]">
+        {/* Video Background */}
+        <video 
+          autoPlay 
+          loop 
+          muted 
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source src="/reelsigala.m4v" type="video/mp4" />
+        </video>
+        
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/80 via-primary/70 to-[hsl(var(--brand-blue-light))]/80" />
+        
+        {/* Content */}
+        <div className="relative h-full flex items-center">
+          <div className="container mx-auto px-4">
+            <div className="max-w-3xl">
+              <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight text-white drop-shadow-lg">
+                Vehículos Seminuevos de la Mejor Calidad
+              </h1>
+              <p className="text-xl md:text-2xl mb-8 text-white/95 drop-shadow-md">
+                Encuentra el auto perfecto para ti con las mejores opciones de financiamiento en Chihuahua
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <Button 
+                  size="lg" 
+                  className="bg-accent hover:bg-accent/90 text-accent-foreground font-bold text-lg px-8 shadow-xl"
+                  asChild
+                >
+                  <Link to="/catalogo">
+                    Ver Catálogo
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Link>
+                </Button>
+                <Button 
+                  size="lg" 
+                  variant="outline" 
+                  className="bg-white/10 backdrop-blur-sm border-2 border-white text-white hover:bg-white hover:text-primary font-bold text-lg px-8 shadow-xl"
+                  asChild
+                >
+                  <Link to="/sobre-nosotros">Conócenos</Link>
+                </Button>
+              </div>
             </div>
           </div>
         </div>
