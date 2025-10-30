@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
-import { Car } from 'lucide-react';
+import logo from '@/assets/logo.jpg';
 
 const Navbar = () => {
   const location = useLocation();
@@ -11,9 +11,11 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           <Link to="/" className="flex items-center space-x-3 group">
-            <div className="bg-accent p-2 rounded-lg group-hover:scale-110 transition-transform">
-              <Car className="h-8 w-8" />
-            </div>
+            <img 
+              src={logo} 
+              alt="Automotriz San Felipe Logo" 
+              className="h-16 w-16 object-contain group-hover:scale-110 transition-transform"
+            />
             <div>
               <h1 className="text-xl font-bold">Automotriz San Felipe</h1>
               <p className="text-xs text-primary-foreground/80">Vehículos Seminuevos de Calidad</p>
