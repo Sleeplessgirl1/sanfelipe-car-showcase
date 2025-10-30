@@ -1,5 +1,19 @@
 import { Car } from '@/types/car';
 
+// Helper function to generate 8 image variations from a single URL
+const generateImages = (baseUrl: string): string[] => {
+  return [
+    baseUrl,
+    `${baseUrl}&brightness=5`,
+    `${baseUrl}&contrast=10`,
+    `${baseUrl}&sat=-20`,
+    `${baseUrl}&q=90`,
+    `${baseUrl}&auto=format`,
+    `${baseUrl}&dpr=2`,
+    `${baseUrl}&fm=jpg`
+  ];
+};
+
 export const cars: Car[] = [
   {
     id: '1',
@@ -8,6 +22,7 @@ export const cars: Car[] = [
     category: 'SUV',
     price: 1250000,
     image: 'https://images.unsplash.com/photo-1617814076367-b759c7d7e738?w=800&h=600&fit=crop',
+    images: generateImages('https://images.unsplash.com/photo-1617814076367-b759c7d7e738?w=800&h=600&fit=crop'),
     details: {
       condition: 'FACTURA DE AGENCIA (DOS DUEÑOS)',
       keys: '2 LLAVES',
@@ -38,6 +53,7 @@ export const cars: Car[] = [
     category: 'SUV',
     price: 579000,
     image: 'https://images.unsplash.com/photo-1609521263047-f8f205293f24?w=800&h=600&fit=crop',
+    images: generateImages('https://images.unsplash.com/photo-1609521263047-f8f205293f24?w=800&h=600&fit=crop'),
     details: {
       condition: 'FACTURA DE AGENCIA (UNICO DUEÑO)',
       keys: '2 LLAVES',
@@ -67,6 +83,7 @@ export const cars: Car[] = [
     category: 'SUV',
     price: 850000,
     image: 'https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=800&h=600&fit=crop',
+    images: generateImages('https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=800&h=600&fit=crop'),
     details: {
       condition: 'FACTURA DE AGENCIA (UNICO DUEÑO)',
       keys: '2 LLAVES',
@@ -95,6 +112,7 @@ export const cars: Car[] = [
     category: 'Pick Up',
     price: 690000,
     image: 'https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=800&h=600&fit=crop',
+    images: generateImages('https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=800&h=600&fit=crop'),
     details: {
       condition: 'FACTURA DE AGENCIA',
       keys: '2 LLAVES',
@@ -124,6 +142,7 @@ export const cars: Car[] = [
     category: 'SUV',
     price: 585000,
     image: 'https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?w=800&h=600&fit=crop',
+    images: generateImages('https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?w=800&h=600&fit=crop'),
     details: {
       condition: 'FACTURA DE SEMINUEVOS CON SU CONSECUTIVO DE AGENCIA',
       keys: '2 LLAVES',
@@ -153,6 +172,7 @@ export const cars: Car[] = [
     category: 'Sedan',
     price: 350000,
     image: 'https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=800&h=600&fit=crop',
+    images: generateImages('https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=800&h=600&fit=crop'),
     details: {
       condition: 'FACTURA DE AGENCIA (UNICO DUEÑO)',
       keys: '2 LLAVES',
@@ -181,6 +201,7 @@ export const cars: Car[] = [
     category: 'Pick Up',
     price: 820000,
     image: 'https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=800&h=600&fit=crop',
+    images: generateImages('https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=800&h=600&fit=crop'),
     details: {
       condition: 'FACTURA DE AGENCIA (UNICO DUEÑO)',
       keys: '2 LLAVES',
@@ -211,6 +232,7 @@ export const cars: Car[] = [
     category: 'Pick Up',
     price: 1000000,
     image: 'https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=800&h=600&fit=crop',
+    images: generateImages('https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=800&h=600&fit=crop'),
     details: {
       condition: 'FACTURA DE AGENCIA (UNICO DUEÑO)',
       keys: '2 LLAVES',
@@ -240,6 +262,7 @@ export const cars: Car[] = [
     category: 'Pick Up',
     price: 399000,
     image: 'https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?w=800&h=600&fit=crop',
+    images: generateImages('https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?w=800&h=600&fit=crop'),
     details: {
       condition: 'FACTURA DE EMPRESA CON SU CONSECUTIVO DE AGENCIA',
       keys: '2 LLAVES',
@@ -266,6 +289,7 @@ export const cars: Car[] = [
     category: 'Deportivo',
     price: 720000,
     image: 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=800&h=600&fit=crop',
+    images: generateImages('https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=800&h=600&fit=crop'),
     details: {
       condition: 'FACTURA DE AGENCIA (UNICO DUEÑO)',
       keys: '2 LLAVES',
@@ -296,6 +320,7 @@ export const cars: Car[] = [
     category: 'Sedan',
     price: 649000,
     image: 'https://images.unsplash.com/photo-1563720360172-67b8f3dce741?w=800&h=600&fit=crop',
+    images: generateImages('https://images.unsplash.com/photo-1563720360172-67b8f3dce741?w=800&h=600&fit=crop'),
     details: {
       condition: 'FACTURA DE AGENCIA (UNICO DUEÑO)',
       keys: '2 LLAVES',
@@ -323,6 +348,7 @@ export const cars: Car[] = [
     category: 'Pick Up',
     price: 1050000,
     image: 'https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?w=800&h=600&fit=crop',
+    images: generateImages('https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?w=800&h=600&fit=crop'),
     details: {
       condition: 'FACTURA DE AGENCIA (UNICO DUEÑO)',
       keys: '2 LLAVES',
@@ -355,6 +381,7 @@ export const cars: Car[] = [
     category: 'SUV',
     price: 1100000,
     image: 'https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=800&h=600&fit=crop',
+    images: generateImages('https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=800&h=600&fit=crop'),
     details: {
       condition: 'FACTURA DE AGENCIA (UNICO DUEÑO)',
       keys: '2 LLAVES',
@@ -384,6 +411,7 @@ export const cars: Car[] = [
     category: 'Pick Up',
     price: 740000,
     image: 'https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=800&h=600&fit=crop',
+    images: generateImages('https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=800&h=600&fit=crop'),
     details: {
       condition: 'FACTURA DE AGENCIA (UNICO DUEÑO)',
       keys: '2 LLAVES',
@@ -411,6 +439,7 @@ export const cars: Car[] = [
     category: 'SUV',
     price: 1090000,
     image: 'https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?w=800&h=600&fit=crop',
+    images: generateImages('https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?w=800&h=600&fit=crop'),
     details: {
       condition: 'FACTURA DE AGENCIA (UNICO DUEÑO)',
       keys: '2 LLAVES',
@@ -440,6 +469,7 @@ export const cars: Car[] = [
     category: 'Sedan',
     price: 295000,
     image: 'https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?w=800&h=600&fit=crop',
+    images: generateImages('https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?w=800&h=600&fit=crop'),
     details: {
       condition: 'FACTURA DE SEMINUEVOS CON SU CONSECUTIVO DE AGENCIA',
       keys: '2 LLAVES',
@@ -467,6 +497,7 @@ export const cars: Car[] = [
     category: 'SUV',
     price: 1190000,
     image: 'https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?w=800&h=600&fit=crop',
+    images: generateImages('https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?w=800&h=600&fit=crop'),
     details: {
       condition: 'FACTURA DE AGENCIA (UNICO DUEÑO)',
       keys: '2 LLAVES',
@@ -495,6 +526,7 @@ export const cars: Car[] = [
     category: 'Sedan',
     price: 300000,
     image: 'https://images.unsplash.com/photo-1617814076367-b759c7d7e738?w=800&h=600&fit=crop',
+    images: generateImages('https://images.unsplash.com/photo-1617814076367-b759c7d7e738?w=800&h=600&fit=crop'),
     details: {
       condition: 'FACTURA DE AGENCIA (UNICO DUEÑO)',
       keys: '2 LLAVES',
@@ -521,6 +553,7 @@ export const cars: Car[] = [
     category: 'SUV',
     price: 320000,
     image: 'https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=800&h=600&fit=crop',
+    images: generateImages('https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=800&h=600&fit=crop'),
     details: {
       condition: 'FACTURA DE EMPRESA CON SU CONSECUTIVO DE AGENCIA',
       keys: '2 LLAVES',
@@ -544,6 +577,7 @@ export const cars: Car[] = [
     category: 'Deportivo',
     price: 685000,
     image: 'https://images.unsplash.com/photo-1603386329225-868f9b1ee6b9?w=800&h=600&fit=crop',
+    images: generateImages('https://images.unsplash.com/photo-1603386329225-868f9b1ee6b9?w=800&h=600&fit=crop'),
     details: {
       condition: 'FACTURA DE EMPRESA CON SU CONSECUTIVO DE AGENCIA',
       keys: '2 LLAVES',
@@ -573,6 +607,7 @@ export const cars: Car[] = [
     category: 'Deportivo',
     price: 505000,
     image: 'https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?w=800&h=600&fit=crop',
+    images: generateImages('https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?w=800&h=600&fit=crop'),
     details: {
       condition: 'FACTURA DE AGENCIA (UNICO DUEÑO)',
       keys: '2 LLAVES',
@@ -598,6 +633,7 @@ export const cars: Car[] = [
     category: 'Pick Up',
     price: 820000,
     image: 'https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?w=800&h=600&fit=crop',
+    images: generateImages('https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?w=800&h=600&fit=crop'),
     details: {
       condition: 'FACTURA DE SEMINUEVOS CON SU CONSECUTIVO DE AGENCIA',
       keys: '2 LLAVES',
@@ -630,6 +666,7 @@ export const cars: Car[] = [
     category: 'Pick Up',
     price: 1250000,
     image: 'https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=800&h=600&fit=crop',
+    images: generateImages('https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=800&h=600&fit=crop'),
     details: {
       condition: 'FACTURA DE EMPRESA CON SU CONSECUTIVO DE AGENCIA',
       keys: '2 LLAVES',
@@ -658,6 +695,7 @@ export const cars: Car[] = [
     category: 'Pick Up',
     price: 810000,
     image: 'https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?w=800&h=600&fit=crop',
+    images: generateImages('https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?w=800&h=600&fit=crop'),
     details: {
       condition: 'FACTURA DE AGENCIA (UNICO DUEÑO)',
       keys: '2 LLAVES',
@@ -690,6 +728,7 @@ export const cars: Car[] = [
     category: 'SUV',
     price: 1650000,
     image: 'https://images.unsplash.com/photo-1611566026373-c6c8da0ea861?w=800&h=600&fit=crop',
+    images: generateImages('https://images.unsplash.com/photo-1611566026373-c6c8da0ea861?w=800&h=600&fit=crop'),
     details: {
       condition: 'FACTURA DE AGENCIA (UNICO DUEÑO)',
       keys: '2 LLAVES',
@@ -720,6 +759,7 @@ export const cars: Car[] = [
     category: 'Pick Up',
     price: 980000,
     image: 'https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=800&h=600&fit=crop',
+    images: generateImages('https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=800&h=600&fit=crop'),
     details: {
       condition: 'FACTURA DE AGENCIA (UNICO DUEÑO)',
       keys: '2 LLAVES',
@@ -748,6 +788,7 @@ export const cars: Car[] = [
     category: 'SUV',
     price: 1430000,
     image: 'https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?w=800&h=600&fit=crop',
+    images: generateImages('https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?w=800&h=600&fit=crop'),
     details: {
       condition: 'FACTURA DE SEMINUEVOS CON SU CONSECUTIVO DE AGENCIA',
       keys: '2 LLAVES',
@@ -778,6 +819,7 @@ export const cars: Car[] = [
     category: 'SUV',
     price: 1320000,
     image: 'https://images.unsplash.com/photo-1617814076367-b759c7d7e738?w=800&h=600&fit=crop',
+    images: generateImages('https://images.unsplash.com/photo-1617814076367-b759c7d7e738?w=800&h=600&fit=crop'),
     details: {
       condition: 'FACTURA DE AGENCIA (UNICO DUEÑO)',
       keys: '2 LLAVES',
@@ -808,6 +850,7 @@ export const cars: Car[] = [
     category: 'SUV',
     price: 415000,
     image: 'https://images.unsplash.com/photo-1617814076367-b759c7d7e738?w=800&h=600&fit=crop',
+    images: generateImages('https://images.unsplash.com/photo-1617814076367-b759c7d7e738?w=800&h=600&fit=crop'),
     details: {
       condition: 'FACTURA DE EMPRESA CON SU CONSECUTIVO DE AGENCIA',
       keys: '2 LLAVES',
@@ -838,6 +881,7 @@ export const cars: Car[] = [
     category: 'Sedan',
     price: 165000,
     image: 'https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?w=800&h=600&fit=crop',
+    images: generateImages('https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?w=800&h=600&fit=crop'),
     details: {
       condition: 'FACTURA DE AGENCIA',
       keys: '2 LLAVES',

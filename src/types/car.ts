@@ -7,6 +7,7 @@ export interface Car {
   category: CarCategory;
   price: number;
   image: string;
+  images: string[];
   details: {
     condition: string;
     keys: string;

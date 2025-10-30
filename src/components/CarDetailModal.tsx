@@ -5,6 +5,13 @@ import {
   DialogHeader,
   DialogTitle,
 } from '@/components/ui/dialog';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from '@/components/ui/carousel';
 import { Check, Phone, Instagram, Facebook } from 'lucide-react';
 import { Button } from './ui/button';
 
@@ -31,13 +38,23 @@ const CarDetailModal = ({ car, open, onOpenChange }: CarDetailModalProps) => {
         </DialogHeader>
         
         <div className="space-y-6">
-          <div className="relative rounded-xl overflow-hidden aspect-video">
-            <img 
-              src={car.image} 
-              alt={`${car.name} ${car.year}`}
-              className="w-full h-full object-cover"
-            />
-          </div>
+          <Carousel className="w-full">
+            <CarouselContent>
+              {car.images.map((image, index) => (
+                <CarouselItem key={index}>
+                  <div className="relative rounded-xl overflow-hidden aspect-video">
+                    <img 
+                      src={image} 
+                      alt={`${car.name} ${car.year} - Imagen ${index + 1}`}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="left-4" />
+            <CarouselNext className="right-4" />
+          </Carousel>
 
           <div className="bg-secondary/30 rounded-xl p-6">
             <h3 className="text-2xl font-bold mb-4 text-foreground">Detalles del vehículo</h3>
